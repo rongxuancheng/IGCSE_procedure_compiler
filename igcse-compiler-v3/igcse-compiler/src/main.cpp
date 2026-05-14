@@ -61,15 +61,19 @@ int main(int argc, char* argv[]) {
     std::string saveCppFile;
     bool emitCpp = false;
     bool noRun   = false;
-    bool printAst= false;
     bool winTarget = false;
+#ifdef _WIN32
+    bool isWindows = true;
+#else
+    bool isWindows = false;
+#endif
 
     for (int i = 1; i < argc; i++) {
         std::string arg = argv[i];
         if (arg == "-h" || arg == "--help") usage(argv[0]);
         else if (arg == "--emit-cpp")  emitCpp  = true;
         else if (arg == "--no-run")    noRun    = true;
-        else if (arg == "--ast")       printAst = true;
+        
         else if (arg == "--win")       winTarget= true;
         else if (arg == "-o" && i+1 < argc) outputFile = argv[++i];
         else if (arg == "--save-cpp" && i+1 < argc) saveCppFile = argv[++i];
@@ -102,7 +106,8 @@ int main(int argc, char* argv[]) {
     }
 
     // ── 3. Parse ──────────────────────────────────────────────────────────────
-    Parser parser(std::move(tokens), diag);
+    Parser parser(tokens, diag);
+
     auto ast = parser.parseProgram();
 
     if (diag.hasErrors()) {
@@ -157,7 +162,7 @@ int main(int argc, char* argv[]) {
     // ── 6. Compile C++ ───────────────────────────────────────────────────────
     std::string compiler = winTarget ? "x86_64-w64-mingw32-g++" : "g++";
     if (outputFile.empty()) {
-        outputFile = winTarget ? "a.exe" : "a.out";
+        outputFile = (winTarget || isWindows) ? "a.exe" : "a.out";
     }
 
     std::string cmd = compiler +

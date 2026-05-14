@@ -661,34 +661,12 @@ class PseudoCompiler:
 # ══════════════════════════════════════════════════════════════════════════════
 
 SAMPLE_CODE = """\
-// IGCSE 伪代码示例 — 冒泡排序
-DECLARE arr : ARRAY[1:5] OF INTEGER
-DECLARE i   : INTEGER
-DECLARE j   : INTEGER
-DECLARE tmp : INTEGER
-DECLARE n   : INTEGER
-
-n ← 5
-OUTPUT "请输入 5 个整数："
-
+// IGCSE 伪代码示例
+DECLARE n : INTEGER
+INPUT n
+OUTPUT "Hello, World!"
 FOR i ← 1 TO n
-    INPUT arr[i]
-NEXT i
-
-// 冒泡排序
-FOR i ← 1 TO n - 1
-    FOR j ← 1 TO n - i
-        IF arr[j] > arr[j + 1] THEN
-            tmp      ← arr[j]
-            arr[j]   ← arr[j + 1]
-            arr[j+1] ← tmp
-        ENDIF
-    NEXT j
-NEXT i
-
-OUTPUT "排序结果："
-FOR i ← 1 TO n
-    OUTPUT arr[i]
+    OUTPUT "Count: ", i
 NEXT i
 """
 

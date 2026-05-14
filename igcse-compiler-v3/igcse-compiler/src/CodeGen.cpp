@@ -120,6 +120,7 @@ std::string CodeGen::tryBuiltin(const std::string& name,
 
 void CodeGen::emitBuiltinHelpers() {
     hdr_ << "// ── IGCSE Runtime Helpers ──────────────────────────────────\n";
+    hdr_ << "#ifdef _WIN32\n#include <windows.h>\n#endif\n";
     hdr_ << "#include <iostream>\n#include <string>\n#include <vector>\n";
     hdr_ << "#include <cmath>\n#include <cstdlib>\n#include <algorithm>\n";
     hdr_ << "#include <sstream>\n#include <stdexcept>\n\n";
@@ -151,6 +152,10 @@ std::string CodeGen::generate(Stmt* program) {
     // Second pass: main body
     out_ << "int main() {\n";
     indent_ = 1;
+    emitLine("#ifdef _WIN32");
+    emitLine("    SetConsoleOutputCP(65001);");
+    emitLine("    SetConsoleCP(65001);");
+    emitLine("#endif");
     emitLine("srand((unsigned)time(nullptr));");
 
     if (program->kind == StmtKind::Block) {

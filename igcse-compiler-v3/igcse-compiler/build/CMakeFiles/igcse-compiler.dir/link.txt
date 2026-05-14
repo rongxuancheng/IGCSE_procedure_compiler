@@ -1,1 +1,3 @@
-/usr/bin/c++ -O3 -DNDEBUG "CMakeFiles/igcse-compiler.dir/src/main.cpp.o" "CMakeFiles/igcse-compiler.dir/src/Lexer.cpp.o" "CMakeFiles/igcse-compiler.dir/src/AST.cpp.o" "CMakeFiles/igcse-compiler.dir/src/Parser.cpp.o" "CMakeFiles/igcse-compiler.dir/src/CodeGen.cpp.o" -o igcse-compiler 
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\igcse-compiler.dir/objects.a
+C:\mingw64\bin\ar.exe qc CMakeFiles\igcse-compiler.dir/objects.a @CMakeFiles\igcse-compiler.dir\objects1.rsp
+C:\mingw64\bin\c++.exe -Wl,--whole-archive CMakeFiles\igcse-compiler.dir/objects.a -Wl,--no-whole-archive -o igcse-compiler.exe -Wl,--out-implib,libigcse-compiler.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\igcse-compiler.dir\linkLibs.rsp

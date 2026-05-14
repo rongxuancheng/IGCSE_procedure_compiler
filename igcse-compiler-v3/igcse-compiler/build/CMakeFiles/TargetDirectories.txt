@@ -1,7 +1,7 @@
-/home/claude/igcse-compiler/build/CMakeFiles/igcse-compiler.dir
-/home/claude/igcse-compiler/build/CMakeFiles/edit_cache.dir
-/home/claude/igcse-compiler/build/CMakeFiles/rebuild_cache.dir
-/home/claude/igcse-compiler/build/CMakeFiles/list_install_components.dir
-/home/claude/igcse-compiler/build/CMakeFiles/install.dir
-/home/claude/igcse-compiler/build/CMakeFiles/install/local.dir
-/home/claude/igcse-compiler/build/CMakeFiles/install/strip.dir
+C:/Users/atron/Desktop/IGCSE_procedure_compiler/igcse-compiler-v3/igcse-compiler/build/CMakeFiles/igcse-compiler.dir
+C:/Users/atron/Desktop/IGCSE_procedure_compiler/igcse-compiler-v3/igcse-compiler/build/CMakeFiles/edit_cache.dir
+C:/Users/atron/Desktop/IGCSE_procedure_compiler/igcse-compiler-v3/igcse-compiler/build/CMakeFiles/rebuild_cache.dir
+C:/Users/atron/Desktop/IGCSE_procedure_compiler/igcse-compiler-v3/igcse-compiler/build/CMakeFiles/list_install_components.dir
+C:/Users/atron/Desktop/IGCSE_procedure_compiler/igcse-compiler-v3/igcse-compiler/build/CMakeFiles/install.dir
+C:/Users/atron/Desktop/IGCSE_procedure_compiler/igcse-compiler-v3/igcse-compiler/build/CMakeFiles/install/local.dir
+C:/Users/atron/Desktop/IGCSE_procedure_compiler/igcse-compiler-v3/igcse-compiler/build/CMakeFiles/install/strip.dir
