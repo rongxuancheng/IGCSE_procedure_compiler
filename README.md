@@ -37,4 +37,9 @@ igcse-compiler input.pseudo              # 编译并运行
 igcse-compiler input.pseudo -o output   # 编译输出可执行文件
 igcse-compiler input.pseudo --emit-cpp  # 输出生成的 C++ 代码
 igcse-compiler input.pseudo --ast       # 显示 AST
+
+```
+### NOTE
+```
+可以直接使用windowsIDLE.py直接运行
 ```
