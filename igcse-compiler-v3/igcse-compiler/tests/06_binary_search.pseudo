@@ -1,0 +1,48 @@
+// ── 示例6：二分查找 ──────────────────────────────────────────────
+DECLARE arr : ARRAY[1:10] OF INTEGER
+DECLARE i   : INTEGER
+DECLARE n   : INTEGER
+DECLARE target : INTEGER
+DECLARE left  : INTEGER
+DECLARE right : INTEGER
+DECLARE mid   : INTEGER
+DECLARE found : BOOLEAN
+DECLARE pos   : INTEGER
+
+n <- 10
+OUTPUT "请输入 10 个升序排列的整数："
+
+FOR i <- 1 TO n
+    INPUT arr[i]
+NEXT i
+
+OUTPUT ""
+OUTPUT "请输入要查找的数："
+INPUT target
+
+// 二分查找
+left  <- 1
+right <- n
+found <- FALSE
+pos   <- 0
+
+WHILE (left <= right) AND (found = FALSE) DO
+    mid <- (left + right) DIV 2
+    IF arr[mid] = target THEN
+        found <- TRUE
+        pos   <- mid
+    ELSE
+        IF arr[mid] < target THEN
+            left <- mid + 1
+        ELSE
+            right <- mid - 1
+        ENDIF
+    ENDIF
+ENDWHILE
+
+OUTPUT ""
+IF found THEN
+    OUTPUT target & " 找到了，位于第 " & pos & " 个位置"
+ELSE
+    OUTPUT target & " 未找到"
+ENDIF

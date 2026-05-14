@@ -1,0 +1,36 @@
+// ── 示例3：函数与过程 ───────────────────────────────────────────────
+
+FUNCTION Factorial(n : INTEGER) RETURNS INTEGER
+    IF n <= 1 THEN
+        RETURN 1
+    ELSE
+        RETURN n * Factorial(n - 1)
+    ENDIF
+ENDFUNCTION
+
+PROCEDURE PrintLine(msg : STRING)
+    OUTPUT ">>> " & msg & " <<<"
+ENDPROCEDURE
+
+PROCEDURE Swap(BYREF a : INTEGER, BYREF b : INTEGER)
+    DECLARE temp : INTEGER
+    temp <- a
+    a <- b
+    b <- temp
+ENDPROCEDURE
+
+DECLARE x : INTEGER
+DECLARE y : INTEGER
+DECLARE n : INTEGER
+
+OUTPUT "输入一个数字计算阶乘："
+INPUT n
+OUTPUT n & "! = " & Factorial(n)
+
+x <- 10
+y <- 20
+OUTPUT "交换前: x=" & x & " y=" & y
+CALL Swap(x, y)
+OUTPUT "交换后: x=" & x & " y=" & y
+
+CALL PrintLine("IGCSE 伪代码编译器测试成功！")

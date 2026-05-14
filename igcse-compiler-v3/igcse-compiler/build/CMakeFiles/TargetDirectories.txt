@@ -1,0 +1,7 @@
+/home/claude/igcse-compiler/build/CMakeFiles/igcse-compiler.dir
+/home/claude/igcse-compiler/build/CMakeFiles/edit_cache.dir
+/home/claude/igcse-compiler/build/CMakeFiles/rebuild_cache.dir
+/home/claude/igcse-compiler/build/CMakeFiles/list_install_components.dir
+/home/claude/igcse-compiler/build/CMakeFiles/install.dir
+/home/claude/igcse-compiler/build/CMakeFiles/install/local.dir
+/home/claude/igcse-compiler/build/CMakeFiles/install/strip.dir

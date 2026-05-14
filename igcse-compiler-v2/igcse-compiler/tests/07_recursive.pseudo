@@ -1,0 +1,38 @@
+// ── 示例7：递归函数 ──────────────────────────────────────────────
+// 递归阶乘
+FUNCTION Factorial(n : INTEGER) RETURNS INTEGER
+    IF n <= 1 THEN
+        RETURN 1
+    ELSE
+        RETURN n * Factorial(n - 1)
+    ENDIF
+ENDFUNCTION
+
+// 递归斐波那契
+FUNCTION Fibonacci(n : INTEGER) RETURNS INTEGER
+    IF n <= 1 THEN
+        RETURN n
+    ELSE
+        RETURN Fibonacci(n - 1) + Fibonacci(n - 2)
+    ENDIF
+ENDFUNCTION
+
+// 主程序
+DECLARE num : INTEGER
+DECLARE result : INTEGER
+
+OUTPUT "请输入一个正整数："
+INPUT num
+
+IF num < 0 THEN
+    OUTPUT "请输入非负整数！"
+ELSE
+    result <- Factorial(num)
+    OUTPUT num & "! = " & result
+ENDIF
+
+OUTPUT ""
+OUTPUT "斐波那契数列前 " & num & " 项："
+FOR i <- 1 TO num
+    OUTPUT Fibonacci(i)
+NEXT i

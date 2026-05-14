@@ -1,0 +1,7 @@
+C:/Users/atron/Desktop/igcse-compiler -copy/build/CMakeFiles/igcse-compiler.dir
+C:/Users/atron/Desktop/igcse-compiler -copy/build/CMakeFiles/edit_cache.dir
+C:/Users/atron/Desktop/igcse-compiler -copy/build/CMakeFiles/rebuild_cache.dir
+C:/Users/atron/Desktop/igcse-compiler -copy/build/CMakeFiles/list_install_components.dir
+C:/Users/atron/Desktop/igcse-compiler -copy/build/CMakeFiles/install.dir
+C:/Users/atron/Desktop/igcse-compiler -copy/build/CMakeFiles/install/local.dir
+C:/Users/atron/Desktop/igcse-compiler -copy/build/CMakeFiles/install/strip.dir

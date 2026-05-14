@@ -1,0 +1,30 @@
+// ── 示例2：循环与数组 ───────────────────────────────────────────────
+DECLARE scores : ARRAY[1:5] OF INTEGER
+DECLARE i      : INTEGER
+DECLARE total  : INTEGER
+DECLARE avg    : REAL
+
+total <- 0
+
+FOR i <- 1 TO 5
+    OUTPUT "输入第 " & i & " 个成绩："
+    INPUT scores[i]
+    total <- total + scores[i]
+NEXT i
+
+avg <- total / 5
+
+OUTPUT "总分：" & total
+OUTPUT "平均分：" & avg
+
+// 找最高分
+DECLARE maxScore : INTEGER
+maxScore <- scores[1]
+
+FOR i <- 2 TO 5
+    IF scores[i] > maxScore THEN
+        maxScore <- scores[i]
+    ENDIF
+NEXT i
+
+OUTPUT "最高分：" & maxScore

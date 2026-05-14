@@ -1,0 +1,46 @@
+// ── 示例4：综合测试 — 猜数字游戏 ──────────────────────────────────
+CONSTANT MAX_TRIES = 7
+CONSTANT SECRET    = 42
+
+DECLARE guess    : INTEGER
+DECLARE tries    : INTEGER
+DECLARE won      : BOOLEAN
+
+tries <- 0
+won   <- FALSE
+
+OUTPUT "=== 猜数字游戏 ==="
+OUTPUT "猜一个 1~100 之间的数，最多 " & MAX_TRIES & " 次机会"
+
+REPEAT
+    OUTPUT "第 " & (tries + 1) & " 次，请输入你的猜测："
+    INPUT guess
+    tries <- tries + 1
+
+    IF guess < SECRET THEN
+        OUTPUT "太小了！"
+    ELSE
+        IF guess > SECRET THEN
+            OUTPUT "太大了！"
+        ELSE
+            OUTPUT "恭喜！猜对了！用了 " & tries & " 次"
+            won <- TRUE
+        ENDIF
+    ENDIF
+
+UNTIL won OR tries >= MAX_TRIES
+
+IF NOT won THEN
+    OUTPUT "很遗憾，答案是 " & SECRET
+ENDIF
+
+// CASE 示例
+DECLARE grade : STRING
+CASE OF tries
+    1 : grade <- "完美"
+    2 : grade <- "优秀"
+    3 : grade <- "良好"
+    OTHERWISE grade <- "普通"
+ENDCASE
+
+OUTPUT "你的表现：" & grade

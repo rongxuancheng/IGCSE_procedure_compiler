@@ -1,0 +1,32 @@
+[
+{
+  "directory": "C:/Users/atron/Desktop/igcse-compiler -copy/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/igcse-compiler.dir/includes_CXX.rsp -g -std=gnu++17 -Wall -Wextra -Wpedantic -o CMakeFiles\\igcse-compiler.dir\\src\\main.cpp.obj -c \"C:\\Users\\atron\\Desktop\\igcse-compiler -copy\\igcse-compiler\\src\\main.cpp\"",
+  "file": "C:/Users/atron/Desktop/igcse-compiler -copy/igcse-compiler/src/main.cpp",
+  "output": "CMakeFiles/igcse-compiler.dir/src/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/atron/Desktop/igcse-compiler -copy/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/igcse-compiler.dir/includes_CXX.rsp -g -std=gnu++17 -Wall -Wextra -Wpedantic -o CMakeFiles\\igcse-compiler.dir\\src\\Lexer.cpp.obj -c \"C:\\Users\\atron\\Desktop\\igcse-compiler -copy\\igcse-compiler\\src\\Lexer.cpp\"",
+  "file": "C:/Users/atron/Desktop/igcse-compiler -copy/igcse-compiler/src/Lexer.cpp",
+  "output": "CMakeFiles/igcse-compiler.dir/src/Lexer.cpp.obj"
+},
+{
+  "directory": "C:/Users/atron/Desktop/igcse-compiler -copy/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/igcse-compiler.dir/includes_CXX.rsp -g -std=gnu++17 -Wall -Wextra -Wpedantic -o CMakeFiles\\igcse-compiler.dir\\src\\AST.cpp.obj -c \"C:\\Users\\atron\\Desktop\\igcse-compiler -copy\\igcse-compiler\\src\\AST.cpp\"",
+  "file": "C:/Users/atron/Desktop/igcse-compiler -copy/igcse-compiler/src/AST.cpp",
+  "output": "CMakeFiles/igcse-compiler.dir/src/AST.cpp.obj"
+},
+{
+  "directory": "C:/Users/atron/Desktop/igcse-compiler -copy/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/igcse-compiler.dir/includes_CXX.rsp -g -std=gnu++17 -Wall -Wextra -Wpedantic -o CMakeFiles\\igcse-compiler.dir\\src\\Parser.cpp.obj -c \"C:\\Users\\atron\\Desktop\\igcse-compiler -copy\\igcse-compiler\\src\\Parser.cpp\"",
+  "file": "C:/Users/atron/Desktop/igcse-compiler -copy/igcse-compiler/src/Parser.cpp",
+  "output": "CMakeFiles/igcse-compiler.dir/src/Parser.cpp.obj"
+},
+{
+  "directory": "C:/Users/atron/Desktop/igcse-compiler -copy/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/igcse-compiler.dir/includes_CXX.rsp -g -std=gnu++17 -Wall -Wextra -Wpedantic -o CMakeFiles\\igcse-compiler.dir\\src\\CodeGen.cpp.obj -c \"C:\\Users\\atron\\Desktop\\igcse-compiler -copy\\igcse-compiler\\src\\CodeGen.cpp\"",
+  "file": "C:/Users/atron/Desktop/igcse-compiler -copy/igcse-compiler/src/CodeGen.cpp",
+  "output": "CMakeFiles/igcse-compiler.dir/src/CodeGen.cpp.obj"
+}
+]

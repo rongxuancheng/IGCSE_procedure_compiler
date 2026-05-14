@@ -1,0 +1,45 @@
+// ── 示例9：过程与引用参数 ────────────────────────────────────────
+// 交换两个数的值
+PROCEDURE Swap(BYREF a : INTEGER, BYREF b : INTEGER)
+    DECLARE temp : INTEGER
+    temp <- a
+    a <- b
+    b <- temp
+ENDPROCEDURE
+
+// 找出最大值
+PROCEDURE FindMax(a : INTEGER, b : INTEGER, BYREF maxVal : INTEGER)
+    IF a > b THEN
+        maxVal <- a
+    ELSE
+        maxVal <- b
+    ENDIF
+ENDPROCEDURE
+
+// 累加器
+PROCEDURE Accumulate(BYREF sum : INTEGER, value : INTEGER)
+    sum <- sum + value
+ENDPROCEDURE
+
+// 主程序
+DECLARE x : INTEGER
+DECLARE y : INTEGER
+DECLARE maxVal : INTEGER
+DECLARE sum : INTEGER
+
+x <- 10
+y <- 20
+OUTPUT "交换前：x = " & x & ", y = " & y
+CALL Swap(x, y)
+OUTPUT "交换后：x = " & x & ", y = " & y
+
+OUTPUT ""
+CALL FindMax(x, y, maxVal)
+OUTPUT "最大值是：" & maxVal
+
+OUTPUT ""
+sum <- 0
+CALL Accumulate(sum, 5)
+CALL Accumulate(sum, 10)
+CALL Accumulate(sum, 15)
+OUTPUT "累加结果：" & sum

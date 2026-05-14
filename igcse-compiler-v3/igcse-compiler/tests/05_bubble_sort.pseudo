@@ -1,0 +1,61 @@
+// ── 示例5：冒泡排序 ──────────────────────────────────────────────
+DECLARE arr : ARRAY[1:8] OF INTEGER
+DECLARE i   : INTEGER
+DECLARE j   : INTEGER
+DECLARE tmp : INTEGER
+DECLARE n   : INTEGER
+DECLARE swapped : BOOLEAN
+
+n <- 8
+OUTPUT "请输入 8 个整数："
+
+FOR i <- 1 TO n
+    INPUT arr[i]
+NEXT i
+
+OUTPUT ""
+OUTPUT "排序前："
+FOR i <- 1 TO n
+    OUTPUT arr[i]
+NEXT i
+
+// 冒泡排序
+i <- 1
+REPEAT
+    swapped <- FALSE
+    FOR j <- 1 TO n - i
+        IF arr[j] > arr[j + 1] THEN
+            tmp        <- arr[j]
+            arr[j]     <- arr[j + 1]
+            arr[j + 1] <- tmp
+            swapped    <- TRUE
+        ENDIF
+    NEXT j
+    i <- i + 1
+UNTIL (swapped = FALSE) OR (i >= n)
+
+OUTPUT ""
+OUTPUT "排序后："
+FOR i <- 1 TO n
+    OUTPUT arr[i]
+NEXT i
+
+// 查找最大值和最小值
+DECLARE maxVal : INTEGER
+DECLARE minVal : INTEGER
+
+maxVal <- arr[1]
+minVal <- arr[1]
+
+FOR i <- 2 TO n
+    IF arr[i] > maxVal THEN
+        maxVal <- arr[i]
+    ENDIF
+    IF arr[i] < minVal THEN
+        minVal <- arr[i]
+    ENDIF
+NEXT i
+
+OUTPUT ""
+OUTPUT "最大值：" & maxVal
+OUTPUT "最小值：" & minVal

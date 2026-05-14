@@ -1,0 +1,14 @@
+// ── 示例1：基础 I/O 与条件 ──────────────────────────────────────────
+DECLARE name : STRING
+DECLARE age  : INTEGER
+
+OUTPUT "请输入你的名字："
+INPUT name
+OUTPUT "请输入你的年龄："
+INPUT age
+
+IF age >= 18 THEN
+    OUTPUT name & " 已成年（" & age & " 岁）"
+ELSE
+    OUTPUT name & " 未成年（" & age & " 岁）"
+ENDIF

@@ -1,0 +1,35 @@
+// ── 示例8：字符串处理 ───────────────────────────────────────────
+DECLARE str1 : STRING
+DECLARE str2 : STRING
+DECLARE result : STRING
+DECLARE length : INTEGER
+DECLARE i : INTEGER
+
+OUTPUT "请输入第一个字符串："
+INPUT str1
+
+OUTPUT "请输入第二个字符串："
+INPUT str2
+
+// 字符串长度
+length <- LENGTH(str1)
+OUTPUT ""
+OUTPUT "第一个字符串长度：" & length
+
+// 字符串连接
+result <- str1 & str2
+OUTPUT "连接后的字符串：" & result
+
+// 大小写转换
+OUTPUT "第一个字符串大写：" & UCASE(str1)
+OUTPUT "第一个字符串小写：" & LCASE(str1)
+
+// 子字符串
+IF length >= 3 THEN
+    OUTPUT "前3个字符：" & SUBSTRING(str1, 1, 3)
+    OUTPUT "第4个字符开始的2个字符：" & SUBSTRING(str1, 4, 2)
+ENDIF
+
+// 字符访问
+OUTPUT "第一个字符串的第一个字符：" & SUBSTRING(str1, 1, 1)
+OUTPUT "第一个字符串的最后一个字符：" & SUBSTRING(str1, length, 1)
