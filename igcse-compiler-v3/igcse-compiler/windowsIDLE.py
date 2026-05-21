@@ -1,19 +1,8 @@
-"""
-IGCSE Pseudocode IDE
-====================
-纯 Python + tkinter 实现，Windows 原生运行，无需 WSL。
-内置完整的词法分析、语法分析、C++ 代码生成器，
-调用系统 g++（MSYS2/MinGW）编译并运行。
-"""
-
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox, font
 import subprocess, threading, os, sys, tempfile, json, re, time
 from pathlib import Path
 
-# ══════════════════════════════════════════════════════════════════════════════
-#   THEME  —  深色 IDE 主题（类 VS Code Dark+）
-# ══════════════════════════════════════════════════════════════════════════════
 THEME = {
     "bg":           "#1e1e1e",
     "bg2":          "#252526",
@@ -45,9 +34,6 @@ THEME = {
     "warn_bg":      "#3c3800",
 }
 
-# ══════════════════════════════════════════════════════════════════════════════
-#   IGCSE LEXER  (Python, for syntax highlighting & error checking)
-# ══════════════════════════════════════════════════════════════════════════════
 KEYWORDS = {
     "DECLARE","CONSTANT","INTEGER","REAL","STRING","BOOLEAN","CHAR",
     "ARRAY","OF","OUTPUT","PRINT","INPUT","IF","THEN","ELSE","ENDIF",
@@ -125,9 +111,7 @@ def tokenize_for_highlight(line: str):
         i += 1
     return tokens
 
-# ══════════════════════════════════════════════════════════════════════════════
 #   INLINE COMPILER  (Python port of the C++ compiler for instant feedback)
-# ══════════════════════════════════════════════════════════════════════════════
 
 class CompileError(Exception):
     def __init__(self, msg, line=0, col=0):
@@ -656,9 +640,8 @@ class PseudoCompiler:
         return CPP_HEADER + "\n".join(self.funcs) + "\n" + "\n".join(lines)
 
 
-# ══════════════════════════════════════════════════════════════════════════════
 #   IDE APPLICATION
-# ══════════════════════════════════════════════════════════════════════════════
+
 
 SAMPLE_CODE = """\
 // IGCSE 伪代码示例
@@ -1398,9 +1381,7 @@ DIV             整除（a DIV b）
             "需要 MSYS2/MinGW g++ 进行最终编译")
 
 
-# ══════════════════════════════════════════════════════════════════════════════
 #   ENTRY POINT
-# ══════════════════════════════════════════════════════════════════════════════
 if __name__ == "__main__":
     app = IGCSEide()
     app.mainloop()
