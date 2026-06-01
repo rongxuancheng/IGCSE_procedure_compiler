@@ -2,6 +2,8 @@
 
 将 IGCSE Computer Science 伪代码编译为可执行程序。
 
+
+
 ## 支持的语法
 
 - 变量声明: `DECLARE x : INTEGER`
