@@ -6,6 +6,8 @@
 
 ## 支持的语法
 
+
+
 - 变量声明: `DECLARE x : INTEGER`
 - 赋值: `x ← 10`
 - 输出: `OUTPUT "Hello"` / `PRINT x`
